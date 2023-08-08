@@ -117,3 +117,6 @@ mod xoshiro128plusplus;
 
 #[cfg_attr(doc_cfg, doc(cfg(feature = "getrandom")))]
 #[cfg(feature = "getrandom")] pub use rand_core::OsRng;
+
+// Re-exports from rand_mt
+pub use rand_mt::{Mt, Mt64};
