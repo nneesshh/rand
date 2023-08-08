@@ -62,23 +62,24 @@ members = [
     "rand_distr",
     "rand_chacha",
     "rand_pcg",
+    "rand_mt",
 ]
 
 [dependencies]
-rand_core = { path = "rand_core", version = "0.7.0" }
-log = { version = "0.4.4", optional = true }
-serde = { version = "1.0.103", features = ["derive"], optional = true }
-rand_chacha = { path = "rand_chacha", version = "0.4.0", default-features = false, optional = true }
+rand_core = { path = "rand_core", version = "0.7" }
+log = { version = "0.4", optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+rand_chacha = { path = "rand_chacha", version = "0.4", default-features = false, optional = true }
 
 [target.'cfg(unix)'.dependencies]
 # Used for fork protection (reseeding.rs)
-libc = { version = "0.2.22", optional = true, default-features = false }
+libc = { version = "0.2", optional = true, default-features = false }
 
 [dev-dependencies]
-rand_pcg = { path = "rand_pcg", version = "0.4.0" }
+rand_pcg = { path = "rand_pcg", version = "0.4" }
 # Only to test serde1
-bincode = "1.2.1"
-rayon = "1.5.3"
+bincode = ""
+rayon = "1"
 criterion = { version = "0.4" }
 
 [[bench]]

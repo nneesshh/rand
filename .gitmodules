@@ -1,0 +1,3 @@
+[submodule "rand_mt"]
+	path = rand_mt
+	url = https://github.com/nneesshh/rand_mt.git
