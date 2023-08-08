@@ -28,7 +28,7 @@ features = ["small_rng", "serde1"]
 
 [features]
 # Meta-features:
-default = ["std", "std_rng"]
+default = ["std", "std_rng", "small_rng"]
 nightly = [] # some additions requiring nightly Rust
 serde1 = ["serde", "rand_core/serde1"]
 
@@ -78,7 +78,7 @@ libc = { version = "0.2", optional = true, default-features = false }
 [dev-dependencies]
 rand_pcg = { path = "rand_pcg", version = "0.4" }
 # Only to test serde1
-bincode = ""
+bincode = "1"
 rayon = "1"
 criterion = { version = "0.4" }
 
